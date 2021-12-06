@@ -1,7 +1,8 @@
-
 PREFIX_PATH = 'src/resources/'
 DAY_1_DATA = 'day1_sonar_sweep.txt'
 DAY_2_DATA = 'day2_dive.txt'
+DAY_3_DATA = 'day3_binary_diagnostic.txt'
+
 
 def read_txt_file_into_list(path, day=1): 
     if day == 1: 
@@ -19,3 +20,9 @@ def read_txt_file_into_list(path, day=1):
                 directions.append(row[0])
                 units.append(int(row[1].rstrip()))
         return directions, units
+    elif day == 3: 
+        data = []
+        with open(path, 'r') as f: 
+            data = f.readlines()
+            data = [str(line.rstrip()) for line in data]
+        return data

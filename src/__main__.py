@@ -8,11 +8,15 @@ from scripts.day2_dive import (
     find_day2_dive_solution_part_1,
     find_day2_dive_solution_part_2
 )
+from scripts.day3_binary_diagnostic import (
+    find_day3_binary_diagnostic_solution_part_1,
+    find_day3_binary_diagnostic_solution_part_2
+)
 
 
 if __name__ == '__main__': 
 
-    day, part = 2, 2
+    day, part = 3, 2
     res = None
 
     if day == 1:
@@ -23,6 +27,10 @@ if __name__ == '__main__':
         data = read_txt_file_into_list(PREFIX_PATH+DAY_2_DATA, day=2)
         if part == 1: res = find_day2_dive_solution_part_1(data)
         elif part == 2: res = find_day2_dive_solution_part_2(data)
+    elif day == 3: 
+        data = read_txt_file_into_list(PREFIX_PATH+DAY_3_DATA, day=3)
+        if part == 1: res = find_day3_binary_diagnostic_solution_part_1(data)
+        elif part == 2: res = find_day3_binary_diagnostic_solution_part_2(data)
 
     print(f"The results for day {day} part {part} is: {res}")
 
